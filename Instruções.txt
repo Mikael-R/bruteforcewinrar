@@ -1,0 +1,31 @@
+Entre no diretório rarPasswordCracker.
+comando pelo terminal: cd rarPasswordCracker
+
+Exemplos:
+
+--fr > para arquivos .rar
+-c > lista de caracteres para o bruteforce, letras, números e especiais para tentativas
+-n > tamanho limite de caracteres que deseja tentar para senha
+
+Por padrão pode deixar como está para fins de testes, para senhas mais complexas
+pode usar mais caracteres que não constam nos exemplos e aumentar o tamanho da senha
+
+python bruteforce.py --fr RARFILE.rar -c charset -n sizeofpassword
+python bruteforce.py --fr arquivo.rar -c abcdefghijklmnopqrstuvwxyz0123 -n 6
+
+python bruteforce.py --fz ZIPFILE.zip -c charset -n sizeofpassword
+python bruteforce.py --fz arquivo.zip -c abcdefghijklmnopqrstuvwxyz0123 -n 6
+
+Segue um exemplo de teste no diretório:
+- entre no diretório rarPasswordCracker
+- terá uma pasta com um arquivo zipado de nome arquivo.zip
+dentro dele contém um arquivo txt somente de exemplo,
+a senha do arquivo zip é: abc
+
+execute o seguinte comando dentro do diretório rarPasswordCracker:
+python bruteforce.py --fz arquivo.zip -c abcdefghijklmnopqrstuvwxyz0123 -n 6
+
+ele retornará a senha de forma quebrada, não a senha: abc, mas outro conjunto de
+caracteres que burla o algortimo de senha e quebra a segurança do arquivo.
+
+
